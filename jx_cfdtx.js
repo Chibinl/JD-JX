@@ -1,7 +1,7 @@
 /**
 *
   Name:财富岛提现
-  Address: 京喜App ====>>>> 全民赚大钱 
+  Address: 京喜App ====>>>> 全民赚大钱
   Update: 2020/12/19 8:00
   Thanks: 
     银河大佬：https://github.com/zbt494
