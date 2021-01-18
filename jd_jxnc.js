@@ -1,6 +1,6 @@
 /*
 特别声明：
-本脚本搬运自 https://github.com/whyour/hundun/blob/master/quanx/jx_nc.js
+本脚本搬运自 https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_jxnc.js
 感谢 @建2 秘密水泥军 大佬Chipun
 
 京喜农场:脚本更新地址 https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_jxnc.js
