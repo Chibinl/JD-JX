@@ -1,7 +1,7 @@
 /*
- * @Author: lxk0301 https://github.com/lxk0301 
+ * @Author: 建2 秘密水泥军
  * @Date: 2020-12-06 18:19:21
- * @Last Modified by: lxk0301
+ * @Last Modified by: Chipun
  * @Last Modified time: 2020-12-26 22:58:02
  */
 /*
@@ -16,17 +16,17 @@
 ============Quantumultx===============
 [task_local]
 #京东工厂
-10 * * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js, tag=东东工厂, enabled=true
+10 * * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_jdfactory.js, tag=东东工厂, enabled=true
 
 ================Loon==============
 [Script]
-cron "10 * * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js,tag=东东工厂
+cron "10 * * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_jdfactory.js,tag=东东工厂
 
 ===============Surge=================
-东东工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js
+东东工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_jdfactory.js
 
 ============小火箭=========
-东东工厂 = type=cron,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js, cronexpr="10 * * * *", timeout=200, enable=true
+东东工厂 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_jdfactory.js, cronexpr="10 * * * *", timeout=200, enable=true
  */
 const $ = new Env('东东工厂');
 
@@ -53,7 +53,7 @@ if ($.isNode()) {
 }
 let wantProduct = ``;//心仪商品名称
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
-const inviteCodes = [`P04z54XCjVWnYaS5u2ak7ZCdan1Bdd2GGiWvC6_uERj`, 'P04z54XCjVWnYaS5m9cZ2ariXVJwHf0bgkG7Uo'];
+const inviteCodes = [`T018v_V1Rhgd9VDRIxib1ACjVWnYaS5kRrbA`, 'P04z54XCjVWnYaS5m9cZ2ariXVJwHf0bgkG7Uo'];
 !(async () => {
   await requireConfig();
   if (!cookiesArr[0]) {
