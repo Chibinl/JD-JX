@@ -4,7 +4,7 @@
   Address: 京喜App ====>>>> 全民赚大钱
   Update: 2020/12/19 8:00
   Thanks: 
-    Chipun大佬.
+    Chipun大佬
   获取Token方式：
   打开【❗️京喜农场❗️】，手动任意完成<工厂任务>、<签到任务>、<金牌厂长任务>一项，提示获取cookie成功即可，然后退出跑任务脚本
   Quantumult X:
