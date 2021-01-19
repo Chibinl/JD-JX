@@ -1,7 +1,7 @@
 /*
 脚本：取关京东店铺和商品
 更新时间：2020-11-22
-因种豆得豆和宠汪汪以及NobyDa大佬的京东签到脚本会关注店铺和商品，故此脚本用来取消已关注的店铺和商品
+因种豆得豆和宠汪汪以及建2 秘密水泥军-Chipun-507宿舍大佬的京东签到脚本会关注店铺和商品，故此脚本用来取消已关注的店铺和商品
 默认每运行一次脚本取消关注10个商品，10个店铺。可结合boxjs自定义取消多少个（目前测试通过最大数量是一次性取消300个商品无异常，大于300请自行测试，建议尽量不要一次性全部取消以免出现问题）。
 建议此脚本运行时间在 种豆得豆和宠汪汪脚本运行之后 再执行
 现有功能: 1、取关商品。2、取关店铺。3、匹配到boxjs输入的过滤关键词后，不再进行此商品/店铺后面(包含输入的关键词商品/店铺)的取关。4、支持京东双账号
@@ -9,12 +9,12 @@
 // Quantumult X
 [task_local]
 #取关京东店铺商品
-55 23 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js, tag=取关京东店铺商品, enabled=true
+55 23 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_unsubscribe.js, tag=取关京东店铺商品, enabled=true
 // Loon
 [Script]
-cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js,tag=取关京东店铺商品
+cron "55 23 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_unsubscribe.js,tag=取关京东店铺商品
 // Surge
-取关京东店铺商品 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js
+取关京东店铺商品 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_unsubscribe.js
  */
 const $ = new Env('取关京东店铺和商品');
 //Node.js用户请在jdCookie.js处填写京东ck;
