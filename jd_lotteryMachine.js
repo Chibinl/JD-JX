@@ -1,17 +1,18 @@
 /*
 京东抽奖机
+感谢@建2 秘密水泥军-Chipun-507宿舍
 更新时间：2021-01-19 10:59
 脚本说明：抽奖活动，【新店福利】【闪购盲盒】【疯狂砸金蛋】【健康服务】【东东福利屋】【东东焕新家】【OPPO】，点通知只能跳转一个，入口在京东APP玩一玩里面可以看到
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 // quantumultx
 [task_local]
 #京东抽奖机
-11 1 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=true
+11 1 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_lotteryMachine.js, tag=京东抽奖机, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=true
 // Loon
 [Script]
-cron "11 1 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js,tag=京东抽奖机
+cron "11 1 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_lotteryMachine.js,tag=京东抽奖机
 // Surge
-京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
+京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_lotteryMachine.js
  */
 const $ = new Env('京东抽奖机');
 //Node.js用户请在jdCookie.js处填写京东ck;
