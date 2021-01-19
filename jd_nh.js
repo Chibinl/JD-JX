@@ -1,7 +1,7 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: shylocks 
  * @Date: 2021-01-11 16:25:41
- * @Last Modified by:   shylocks
+ * @Last Modified by:   建2 秘密水泥军-Chipun-507宿舍
  * @Last Modified time: 2021-01-11 18:25:41
  */
 /*
@@ -13,17 +13,17 @@
 ============Quantumultx===============
 [task_local]
 #京东年货节
-1 7 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_nh.js, tag=京东年货节, enabled=true
+1 7 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_nh.js, tag=京东年货节, enabled=true
 
 ================Loon==============
 [Script]
-cron "1 7 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_nh.js,tag=京东年货节
+cron "1 7 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_nh.js,tag=京东年货节
 
 ===============Surge=================
-京东年货节 = type=cron,cronexp="1 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_nh.js
+京东年货节 = type=cron,cronexp="1 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_nh.js
 
 ============小火箭=========
-京东年货节 = type=cron,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_nh.js, cronexpr="1 7 * * *", timeout=200, enable=true
+京东年货节 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_nh.js, cronexpr="1 7 * * *", timeout=200, enable=true
  */
 const $ = new Env('京东年货节');
 
