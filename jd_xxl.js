@@ -1,7 +1,8 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: Chipun 
  * @Date: 2021-01-17 16:25:41
- * @Last Modified by:   shylocks
+ * @Last Modified by:   Chipun
+ * @感谢建2 秘密水泥军-Chipun-507宿舍
  * @Last Modified time: 2021-01-18 18:25:41
  */
 /*
@@ -12,17 +13,17 @@
 ============Quantumultx===============
 [task_local]
 #东东爱消除
-0 * * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl.js, tag=东东爱消除, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_xxl.jpg, enabled=true
+0 * * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xxl.js, tag=东东爱消除, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_xxl.jpg, enabled=true
 
 ================Loon==============
 [Script]
-cron "0 * * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl.js,tag=东东爱消除
+cron "0 * * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xxl.js,tag=东东爱消除
 
 ===============Surge=================
-东东爱消除 = type=cron,cronexp="0 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl.js
+东东爱消除 = type=cron,cronexp="0 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xxl.js
 
 ============小火箭=========
-东东爱消除 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xxl.js, cronexpr="0 * * * *", timeout=200, enable=true
+东东爱消除 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xxl.js, cronexpr="0 * * * *", timeout=200, enable=true
  */
 const $ = new Env('东东爱消除');
 const notify = $.isNode() ? require('./sendNotify.js') : '';
