@@ -1,17 +1,18 @@
 /*
 全民炸年兽 过年活动
+感谢@建2 秘密水泥军-Chipun-507宿舍
 更新时间：2021-01-18 15:08
 做任务，收爆竹，年味小镇任务
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 // quantumultx
 [task_local]
 #全民炸年兽
-5 0-22/2 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_nianBeast.js, tag=全民炸年兽, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
+5 0-22/2 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_nianBeast.js, tag=全民炸年兽, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
 // Loon
 [Script]
-cron "5 0-22/2 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_nianBeast.js,tag=全民炸年兽
+cron "5 0-22/2 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_nianBeast.js,tag=全民炸年兽
 // Surge
-全民炸年兽 = type=cron,cronexp=5 0-22/2 * * *,wake-system=1,timeout=500,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_nianBeast.js
+全民炸年兽 = type=cron,cronexp=5 0-22/2 * * *,wake-system=1,timeout=500,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_nianBeast.js
 */
 const $ = new Env('全民炸年兽');
 //Node.js用户请在jdCookie.js处填写京东ck;
