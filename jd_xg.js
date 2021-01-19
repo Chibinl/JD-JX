@@ -1,7 +1,8 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: Chipun 
  * @Date: 2021-01-11 16:25:41
- * @Last Modified by:   shylocks
+ * @Last Modified by:   Chipun
+ * @感谢建2 秘密水泥军-Chipun-507宿舍
  * @Last Modified time: 2021-01-11 18:25:41
  */
 /*
@@ -14,17 +15,17 @@
 ============Quantumultx===============
 [task_local]
 #小鸽有礼
-5 7 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_xg.js, tag=小鸽有礼, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_xg.jpg, enabled=true
+5 7 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xg.js, tag=小鸽有礼, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_xg.jpg, enabled=true
 
 ================Loon==============
 [Script]
-cron "5 7 * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xg.js,tag=小鸽有礼
+cron "5 7 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xg.js,tag=小鸽有礼
 
 ===============Surge=================
-小鸽有礼 = type=cron,cronexp="5 7 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xg.js
+小鸽有礼 = type=cron,cronexp="5 7 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xg.js
 
 ============小火箭=========
-小鸽有礼 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_xg.js, cronexpr="5 7 * * *", timeout=200, enable=true
+小鸽有礼 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xg.js, cronexpr="5 7 * * *", timeout=200, enable=true
  */
 const $ = new Env('小鸽有礼');
 const notify = $.isNode() ? require('./sendNotify') : '';
