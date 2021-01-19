@@ -1,7 +1,8 @@
 /*
- * @Author: shylocks https://github.com/shylocks
+ * @Author: Chipun
  * @Date: 2021-01-13 16:13:41
- * @Last Modified by:   shylocks
+ * @Last Modified by:   Chipun
+ * @感谢建2 秘密水泥军-Chipun-507宿舍
  * @Last Modified time: 2021-01-13 18:25:41
  */
 /*
@@ -15,15 +16,15 @@
 hostname = wq.jd.com
 ============Quantumultx===============
 [rewrite_local]
-https:\/\/wq\.jd\.com\/bases\/jssdk\/GetWxJsApiSign url script-request-header https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
+https:\/\/wq\.jd\.com\/bases\/jssdk\/GetWxJsApiSign url script-request-header https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_wechat_sign.js
 [task_local]
 #京东粉丝专享
-10 0 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js, tag=京东粉丝专享, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_wechat_sign.jpg, enabled=true
+10 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_wechat_sign.js, tag=京东粉丝专享, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_wechat_sign.jpg, enabled=true
 
 ================Loon==============
 [Script]
-http-request https:\/\/wq\.jd\.com\/bases\/jssdk\/GetWxJsApiSign tag=获取京东微信ck, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
-cron "10 0 * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js,tag=京东粉丝专享
+http-request https:\/\/wq\.jd\.com\/bases\/jssdk\/GetWxJsApiSign tag=获取京东微信ck, script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_wechat_sign.js
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_wechat_sign.js,tag=京东粉丝专享
 
 ===============Surge=================
 [Script]
