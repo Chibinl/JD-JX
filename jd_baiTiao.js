@@ -1,9 +1,10 @@
 /*
 京东金融领白条券
+感谢@建2 秘密水泥军-Chipun-507宿舍
 更新时间：2021-01-07 09:04
 [task_local]
 # 京东金融领白条券  0点,9点执行（非天天领券要9点开始领，扫码券0点领）
-0 0,9 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_baiTiao.js, tag=京东白条, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/baitiao.png, enabled=true
+0 0,9 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_baiTiao.js, tag=京东白条, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/baitiao.png, enabled=true
 */
 const $ = new Env('天天领白条券');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
