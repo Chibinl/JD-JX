@@ -1,5 +1,6 @@
 /*
 京东排行榜
+感谢@建2 秘密水泥军-Chipun-507宿舍
 更新时间：2020-11-20 13:55
 脚本说明：京东排行榜签到得京豆
 活动入口：找不着了，点击脚本通知进入吧
@@ -7,12 +8,12 @@
 // quantumultx
 [task_local]
 #京东排行榜
-11 9 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js, tag=京东排行榜, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
+11 9 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_rankingList.js, tag=京东排行榜, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jd.png, enabled=true
 // Loon
 [Script]
-cron "11 9 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js,tag=京东排行榜
+cron "11 9 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_rankingList.js,tag=京东排行榜
 // Surge
-京东排行榜 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
+京东排行榜 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_rankingList.js
  */
 const $ = new Env('京东排行榜');
 //Node.js用户请在jdCookie.js处填写京东ck;
