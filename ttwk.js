@@ -1,17 +1,18 @@
 /*
 天天挖矿
 更新时间：2021-01-16 19:51
+感谢@建2 秘密水泥军-Chipun-507宿舍
 脚本说明：支付宝天天挖矿小程序 beta
 首次运行脚本，会提示获取Cookie，点击直达小程序界面
 
 圈X配置如下，其他软件自行测试
 [task_local]
 #天天挖矿
-10 1 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, tag=天天挖矿, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/ttwk.png, enabled=true
+10 1 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/ttwk.js, tag=天天挖矿, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/ttwk.png, enabled=true
 
 [rewrite_local]
 #获取挖矿Cookie
-^https:\/\/operation-api\.jimistore\.com\/* url script-request-body https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js
+^https:\/\/operation-api\.jimistore\.com\/* url script-request-body https://raw.githubusercontent.com/Chibinl/JD-JX/main/ttwk.js
 
 [MITM]
 hostname = operation-api.jimistore.com
