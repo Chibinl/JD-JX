@@ -1,9 +1,9 @@
 
-/*ziye
+/*建2 秘密水泥军-Chipun-507宿舍
 
 //返利网 天天领现金，活动时间 不一定
 
-下载地址  http://m.a8fdj.cn/Invite/promotion?id=775&spm=page_name.h5.pty-wxzcpv~std-65354&go=http%3A%2F%2Fhuodong.a8fdj.cn%2Fh5%2FInvitefriendsreward%2FregisterCallback%3Fuserid%3D373511081%26id%3D775%26sn%3D47ecab06aba43e015082e531d8214eb5
+下载地址  http://m.a8fdj.cn/Invite/promotion?id=775&spm=page_name.h5.pty-wxzcpv~std-65354&go=http%3A%2F%2Fhuodong.a8fdj.cn%2Fh5%2FInvitefriendsreward%2FregisterCallback%3Fuserid%3D220383680%26id%3D775%26sn%3Da92ec617356c8307abda9aad5d128595
 
 下载后登录
 
@@ -22,30 +22,30 @@ hostname=huodong.fanli.com,passport.fanli.com
 
 #返利网红包
 ############## 圈x
-https:\/\/huodong\.fanli\.com\/h5\/Fanlishare20201212\/ajaxInit url script-request-header https://raw.githubusercontent.com/ziye12/JavaScript/master/flwhbziye.js   
+https:\/\/huodong\.fanli\.com\/h5\/Fanlishare20201212\/ajaxInit url script-request-header https://raw.githubusercontent.com/Chibinl/JD-JX/main/flwhb.js   
+
+https:\/\/passport\.fanli\.com\/* url script-request-header https://raw.githubusercontent.com/Chibinl/JD-JX/main/flwhb.js   
 
 
-https:\/\/passport\.fanli\.com\/* url script-request-header https://raw.githubusercontent.com/ziye12/JavaScript/master/flwhbziye.js   
-
-
-
+#返利网红包
+2 7 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/flwhb.js, tag=返利网领红包, enabled=true
 
 
 #返利网红包
 ############## loon
 
-http-request https:\/\/huodong\.fanli\.com\/h5\/Fanlishare20201212\/ajaxDoTask76728 script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/flwhbziye.js,requires-header=true, tag=返利网红包获取cookie 
+http-request https:\/\/huodong\.fanli\.com\/h5\/Fanlishare20201212\/ajaxDoTask76728 script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/flwhb.js.js,requires-header=true, tag=返利网红包获取cookie 
 
-http-request https:\/\/passport\.fanli\.com\/* script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/flwhbziye.js,requires-header=true, tag=返利网红包获取cookie
+http-request https:\/\/passport\.fanli\.com\/* script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/flwhb.js.js,requires-header=true, tag=返利网红包获取cookie
 
 
 #返利网红包
 ############## surge
 
-返利网红包 = type=http-request,pattern=https:\/\/huodong\.fanli\.com\/h5\/Fanlishare20201212\/ajaxDoTask76728,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/flwhbziye.js,
+返利网红包 = type=http-request,pattern=https:\/\/huodong\.fanli\.com\/h5\/Fanlishare20201212\/ajaxDoTask76728,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/flwhbziye.js,
 
 
-返利网红包 = type=https:\/\/passport\.fanli\.com\/*,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/flwhbziye.js,
+返利网红包 = type=https:\/\/passport\.fanli\.com\/*,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/flwhb.js.js,
 
 
 
