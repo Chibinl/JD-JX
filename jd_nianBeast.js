@@ -607,7 +607,7 @@ function nian_getHomeData(body= "",timeout = 0) {
             await nian_collectProduceScore();
             //await nian_pk_assistGroup()
             if (data.data.result.homeMainInfo.raiseInfo.buttonStatus === 2 ) await nian_raise(1000)
-            await nian_getHomeData('cgxZdTXtI7rY7QzIDVGruT27sg3MZUNTPPXB0nSP-6UZYxVnPt82X4524ho');
+            await nian_getHomeData('cgxZLmmEIrze6grPCwfGr480Zh5pyDdd7vhTYwknMR5iQV0FoQ');
             await nian_getTaskDetail("","app")
             await nian_getTaskDetail()
           } else {
