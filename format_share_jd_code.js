@@ -1,20 +1,20 @@
 /*
 现在只能获取手动提交
-基于 lxk0301 大佬的版本基础上做了格式划打印调整
+基于 建2 秘密水泥军-Chipun-507宿舍 大佬的版本基础上做了格式划打印调整
 
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #获取互助码
-20 * 0/1 1,8,16,24 * ? https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js, tag=获取并提交助力码, img-url=https://raw.githubusercontent.com/yogayyy/task/master/huzhucode.png, enabled=true
+20 * 0/1 1,8,16,24 * ? https://raw.githubusercontent.com/Chibinl/JD-JX/main/format_share_jd_code.js, tag=获取并提交助力码, img-url=https://raw.githubusercontent.com/yogayyy/task/master/huzhucode.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "20 * 0/1 1,8,16,24 * ?" script-path=https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js, tag=获取并提交助力码
+cron "20 * 0/1 1,8,16,24 * ?" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/format_share_jd_code.js, tag=获取并提交助力码
 
 ===============Surge=================
-获取并提交助力码 = type=cron,cronexp="20 * 0/1 1,8,16,24 * ?",wake-system=1,timeout=120,script-path=https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js
+获取并提交助力码 = type=cron,cronexp="20 * 0/1 1,8,16,24 * ?",wake-system=1,timeout=120,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/format_share_jd_code.js
 
 ============小火箭=========
 获取并提交助力码 = type=cron,script-path=https://gitee.com/qq34347476/quantumult-x/raw/master/get_share_jd_code.js, cronexpr="0 35 2 1,10,20 * ?", timeout=200, enable=true
