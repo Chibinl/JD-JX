@@ -1,5 +1,6 @@
 /*
 京东疯狂的Joy
+感谢@建2 秘密水泥军-Chipun-507宿舍
 更新时间：2021-01-14 14:53
 脚本说明：
 可自动签到，看视频，生产金币，领金币宝箱，做任务，合并（34级不合并），自定义购买等级，互助
@@ -11,12 +12,12 @@ cron自己看着设置，如开启生产金币则会24小时执行
 // quantumultx
 [task_local]
 #疯狂的Joy
-11 6 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_crazyJoy.js, tag=疯狂的Joy, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=true
+11 6 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_crazyJoy.js, tag=疯狂的Joy, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/jdlottery.png, enabled=true
 // Loon
 [Script]
-cron "11 6 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_crazyJoy.js,tag=疯狂的Joy
+cron "11 6 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_crazyJoy.js,tag=疯狂的Joy
 // Surge
-疯狂的Joy = type=cron,cronexp=11 6 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_crazyJoy.js
+疯狂的Joy = type=cron,cronexp=11 6 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_crazyJoy.js
 */
 // prettier-ignore
 !function (t, r) { "object" == typeof exports ? module.exports = exports = r() : "function" == typeof define && define.amd ? define([], r) : t.CryptoJS = r() }(this, function () {
