@@ -1,6 +1,6 @@
 /*
 
- @𝐗𝐢𝐝𝐍 𝐃𝐃    
+ @建2 秘密水泥军-Chipun-507宿舍  
 //++++++++++++++++++++++++++++++++-
 
 
@@ -14,50 +14,30 @@
 
 打开软件签到获取ck 签过到可能获取不到ck
 
+MITM= appsmall.rtmap.com
 
+圈x:
+#签到[rewrite_local]
+#民盈国贸城
+^https:\/\/appsmall\.rtmap\.com\/* url script-request-body https://raw.githubusercontent.com/Chibinl/JD-JX/main/mygmcSign.js
 
-
-
-
+#[task_local]
+#民盈国贸城
+0 10 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/mygmcSign.js, tag=民盈国贸城, enabled=true
 
 
 surge:远程
-民盈国贸城 = type=http-request,pattern=^https:\/\/appsmall\.rtmap\.com\/*,requires-body=1,max-size=0,script-path=mygmcSign.js
+民盈国贸城 = type=http-request,pattern=^https:\/\/appsmall\.rtmap\.com\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/mygmcSign.js
 
-定时 民盈国贸城 = type=cron,cronexp=0 10 0 * * *,script-path=mygmcSign.js
-
-
-
-圈x:远程
-签到获取ck
-^https:\/\/appsmall\.rtmap\.com\/* url script-request-body mygmcSign.js
-
-
-
-
-
-定时 0 10 0 * * * mygmcSign.js, tag=民盈国贸城, enabled=true
-
-
+定时 民盈国贸城 = type=cron,cronexp=0 10 0 * * *,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/mygmcSign.js
 
 
 
 loon:远程
 签到获取ck
-http-request ^https:\/\/appsmall\.rtmap\.com\/* script-path=mygmcSign.js, requires-body=true, timeout=10, tag=民盈国贸城
+http-request ^https:\/\/appsmall\.rtmap\.com\/* script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/mygmcSign.js, requires-body=true, timeout=10, tag=民盈国贸城
 
-
-
-
-定时 cron "0 10 0 * * *" script-path=mygmcSign.js
-
-
-
-
-MITM= appsmall.rtmap.com
-
-
-
+定时 cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/mygmcSign.js
 
 
 */
