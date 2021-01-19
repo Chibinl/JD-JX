@@ -1,17 +1,18 @@
 /*
 东东小窝
+感谢@建2 秘密水泥军-Chipun-507宿舍
 更新时间：2020-12-06 06:07
 脚本说明：加购任务不需要请去BoxJs中关闭！
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 // quantumultx
 [task_local]
 #东东小窝
-11 0 * * * https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_woHome.js, tag=东东小窝, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/woHome.png, enabled=true
+11 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_woHome.js, tag=东东小窝, img-url=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/image/woHome.png, enabled=true
 // Loon
 [Script]
-cron "11 0 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_woHome.js,tag=东东小窝
+cron "11 0 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_woHome.js,tag=东东小窝
 // Surge
-东东小窝 = type=cron,cronexp=11 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_woHome.js
+东东小窝 = type=cron,cronexp=11 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_woHome.js
  */
 const $ = new Env('东东小窝');
 //Node.js用户请在jdCookie.js处填写京东ck;
