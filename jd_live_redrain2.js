@@ -1,23 +1,24 @@
 /*
 直播间红包雨
 活动时间：1月17日-2月5日，每天19点、20点、21点
-更新地址：https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js
+更新地址：https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_live_redrain2.js
+感谢@建2 秘密水泥军-Chipun-507宿舍
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #直播间红包雨
-0,1 19-21/1 * * * https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js, tag=直播间红包雨, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_live_redrain.jpg, enabled=true
+0,1 19-21/1 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_live_redrain2.js, tag=直播间红包雨, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/shylocks/jd_live_redrain.jpg, enabled=true
 
 ================Loon==============
 [Script]
-cron "0,1 19-21/1 * * *" script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js, tag=直播间红包雨
+cron "0,1 19-21/1 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_live_redrain2.js, tag=直播间红包雨
 
 ===============Surge=================
-直播间红包雨 = type=cron,cronexp="0,1 19-21/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js
+直播间红包雨 = type=cron,cronexp="0,1 19-21/1 * * *",wake-system=1,timeout=200,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_live_redrain2.js
 
 ============小火箭=========
-直播间红包雨 = type=cron,script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_live_redrain2.js, cronexpr="0,1 19-21/1 * * *", timeout=200, enable=true
+直播间红包雨 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_live_redrain2.js, cronexpr="0,1 19-21/1 * * *", timeout=200, enable=true
  */
 const $ = new Env('直播间红包雨');
 
