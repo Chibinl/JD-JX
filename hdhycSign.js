@@ -1,6 +1,6 @@
 /*
 
- @𝐗𝐢𝐝𝐍 𝐃𝐃    
+ @建2 秘密水泥军-Chipun-507宿舍    
 //++++++++++++++++++++++++++++++++-
 
 
@@ -14,54 +14,36 @@
 
 打开软件签到获取ck 签过到可能获取不到ck
 
+MITM= wox2019.woxshare.com
 
 
+圈x
+#签到[rewrite_local]
+#海德汇一城
+^https:\/\/wox2019\.woxshare\.com\/* url script-request-body https://raw.githubusercontent.com/Chibinl/JD-JX/main/hdhycSign.js
 
-
-
+#[task_local]
+#海德汇一城
+定时 0 10 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/hdhycSign.js, tag=海德汇一城, enabled=true
 
 
 surge:远程
-海德汇一城 = type=http-request,pattern=^https:\/\/wox2019\.woxshare\.com\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/hdhycSign.js
+海德汇一城 = type=http-request,pattern=^https:\/\/wox2019\.woxshare\.com\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/hdhycSign.js
 
-定时 海德汇一城 = type=cron,cronexp=0 10 0 * * *,script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/hdhycSign.js
-
-
-
-圈x:远程
-签到获取ck
-^https:\/\/wox2019\.woxshare\.com\/* url script-request-body https://raw.githubusercontent.com/XidNDD/2020scripts/master/hdhycSign.js
-
-
-
-
-
-定时 0 10 0 * * * https://raw.githubusercontent.com/XidNDD/2020scripts/master/hdhycSign.js, tag=海德汇一城, enabled=true
-
-
-
+定时 海德汇一城 = type=cron,cronexp=0 10 0 * * *,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/hdhycSign.js
 
 
 loon:远程
 签到获取ck
-http-request ^https:\/\/wox2019\.woxshare\.com\/* script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/hdhycSign.js, requires-body=true, timeout=10, tag=海德汇一城
+http-request ^https:\/\/wox2019\.woxshare\.com\/* script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/hdhycSign.js, requires-body=true, timeout=10, tag=海德汇一城
 
+定时 cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/hdhycSign.js
 
-
-
-定时 cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/hdhycSign.js
 
 小火箭:远程
-海德汇一城 = type=http-request,script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/hdhycSign.js,pattern= ^https:\/\/wox2019\.woxshare\.com\/*,max-size=131072,requires-body=true,timeout=10,enable=true
+海德汇一城 = type=http-request,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/hdhycSign.js,pattern= ^https:\/\/wox2019\.woxshare\.com\/*,max-size=131072,requires-body=true,timeout=10,enable=true
 
 海德汇一城 = type=cron,script-path=hdhycSign.js,cronexpr="0 07 16 * * *",timeout=10,enable=true
-
-
-
-MITM= wox2019.woxshare.com
-
-
-
 
 
 */
