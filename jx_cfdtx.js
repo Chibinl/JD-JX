@@ -2,46 +2,59 @@
 *
   Name:财富岛提现
   Address: 京喜App ====>>>> 全民赚大钱
-  Author：Chipun
+  Author：MoPoQAQ
   Update: 2021/1/21 12:00
 
   Thanks: 
-    Chipun大佬
+    银河大佬：https://github.com/zbt494
   获取Token方式：
   打开【❗️京喜农场❗️】，手动任意完成<工厂任务>、<签到任务>、<金牌厂长任务>一项，提示获取cookie成功即可，然后退出跑任务脚本
 
   Quantumult X:
   [task_local]
-  0 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jx_cfdtx.js, tag=财富岛提现, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxcfd.png, enabled=true
+  0 0 * * * jx_cfdtx.js, tag=财富岛提现, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxcfd.png, enabled=true
   [rewrite_local]
   ^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
 
   Loon:
   [Script]
   http-request ^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js, requires-body=false, timeout=10, tag=京喜农场cookie
-  cron "0 0 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jx_cfdtx.js,tag=财富岛提现
+  cron "0 0 * * *" script-path=jx_cfdtx.js,tag=财富岛提现
     
   Surge:
-  财富岛提现 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jx_cfdtx.js
+  财富岛提现 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=20,script-path=jx_cfdtx.js
   京喜农场cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
     
   Shadowrocket:
   [Script]
-  财富岛提现 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jx_cfdtx.js,cronexpr="0 0 * * *",timeout=120,enable=true
+  财富岛提现 = type=cron,script-path=jx_cfdtx.js,cronexpr="0 0 * * *",timeout=120,enable=true
   京喜农场Cookie = type=http-request,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,max-size=131072,timeout=10,enable=true
 
   BoxJS订阅
   https://raw.githubusercontent.com/whyour/hundun/master/quanx/whyour.boxjs.json
+
+  ################################## 定义京喜农场TOKEN（选填） ##################################
+  ## 如果某个Cookie的账号种植的是app种子，则必须填入有效的TOKEN；而种植非app种子则不需要TOKEN
+  ## TOKEN的形式：{"farm_jstoken":"749a90f871adsfads8ffda7bf3b1576760","timestamp":"1610165423873","phoneid":"42c7e3dadfadsfdsaac-18f0e4f4a0cf"}
+  ## 因TOKEN中带有双引号，因此，变量值两侧必须由一对单引号引起来
+  ## TOKEN如何获取请阅读以下文件的注释：https://github.com/lxk0301/jd_scripts/blob/master/jd_jxnc.js
+  TokenJxnc1='{"farm_jstoken":"xxx","phoneid":"xxx","timestamp":"xxx"}'
+  TokenJxnc2=''
+  TokenJxnc3=''
+  TokenJxnc4=''
+  TokenJxnc5=''
+  TokenJxnc6=''
 *
 **/
 
 const $ = new Env("京喜财富岛提现");
 const JD_API_HOST = "https://m.jingxi.com/";
 const jdCookieNode = $.isNode() ? require("./jdCookie.js") : "";
-$.tokens = [$.getdata('jxnc_token1') || '{}', $.getdata('jxnc_token2') || '{}'];
+const jdTokenNode = $.isNode() ? require('./jdJxncTokens.js') : '';
 $.result = [];
 $.cookieArr = [];
 $.currentCookie = '';
+$.tokenArr = [];
 $.currentToken = {};
 $.strPhoneID = '';
 $.strPgUUNum = '';
@@ -49,9 +62,10 @@ $.userName = '';
 
 !(async () => {
   if (!getCookies()) return;
+  if (!getTokens()) return;
   for (let i = 0; i < $.cookieArr.length; i++) {
     $.currentCookie = $.cookieArr[i];
-    $.currentToken = JSON.parse($.tokens[i]);
+    $.currentToken = JSON.parse($.tokenArr[0] || '{}');
     if ($.currentCookie) {
       $.userName =  decodeURIComponent($.currentCookie.match(/pt_pin=(.+?);/) && $.currentCookie.match(/pt_pin=(.+?);/)[1]);
       $.log(`\n开始【京东账号${i + 1}】${$.userName}`);
@@ -120,6 +134,24 @@ function getCookies() {
       {
         "open-url": "https://bean.m.jd.com/",
       }
+    );
+    return false;
+  }
+  return true;
+}
+
+function getTokens() {
+  if ($.isNode()) {
+    Object.keys(jdTokenNode).forEach((item) => {
+      $.tokenArr.push(jdTokenNode[item] ? JSON.parse(jdTokenNode[item]) : '{}');
+    })
+  } else {
+    $.tokenArr = [$.getdata('jxnc_token1') || '{}', $.getdata('jxnc_token2') || '{}'];
+  }
+  if (!$.tokenArr[0]) {
+    $.msg(
+      $.name,
+      "【⏰提示】请先获取京喜Token\n获取方式见脚本说明"
     );
     return false;
   }
