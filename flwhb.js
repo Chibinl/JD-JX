@@ -12,21 +12,17 @@
 ⚠️会卡住，但是能获取到cookie，然后注释重写就行了！
 提现请先微信关注返利网公众号
 
+[MitM]
 hostname=huodong.fanli.com,passport.fanli.com
 
 时间👇
-
-
-
-
-
+############## 圈x ##############
+[rewrite_local]
 #返利网红包
-############## 圈x
-https:\/\/huodong\.fanli\.com\/h5\/Fanlishare20201212\/ajaxInit url script-request-header https://raw.githubusercontent.com/Chibinl/JD-JX/main/flwhb.js   
+https:\/\/huodong\.fanli\.com\/h5\/Fanlishare20201212\/ajaxInit url script-request-header https://raw.githubusercontent.com/ziye12/JavaScript/master/flwhbziye.js   
+https:\/\/passport\.fanli\.com\/* url script-request-header https://raw.githubusercontent.com/ziye12/JavaScript/master/flwhbziye.js   
 
-https:\/\/passport\.fanli\.com\/* url script-request-header https://raw.githubusercontent.com/Chibinl/JD-JX/main/flwhb.js   
-
-
+[task_local]
 #返利网红包
 2 7 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/flwhb.js, tag=返利网领红包, enabled=true
 
