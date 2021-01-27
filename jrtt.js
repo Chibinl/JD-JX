@@ -1,14 +1,13 @@
 /*
 
-tgchannel：https://t.me/ZhiYi_Script
-github：https://github.com/ZhiYi-N/script
+感谢：博隽大佬-Chipun
 转载给我留个名字，谢谢
 
 
-邀请码：1980436898
+邀请码：
 我的--输入邀请码，立得一元，直接提现，谢谢
 
-作者：执意ZhiYi-N
+作者：Chipun
 目前包含：
 签到
 开首页宝箱
