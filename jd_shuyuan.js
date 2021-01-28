@@ -6,6 +6,9 @@
 示例：D_IMMORTAL_LATLON={"lat":33.1, "lng":118.1}
 boxjs IMMORTAL_LATLON
 
+#京东神仙书院
+1 7 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_shuyuan.js, tag=🐕东神仙书院, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/jd.png, enabled=true
+
  */
 const $ = new Env('京东神仙书院');
 
