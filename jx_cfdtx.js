@@ -3,47 +3,14 @@
   Name:财富岛提现
   Address: 京喜App ====>>>> 全民赚大钱
   Author：MoPoQAQ
-  Update: 2021/1/21 12:00
+  Update: 2021/1/26 17:30
 
   Thanks: 
+    💢疯疯💢
     银河大佬：https://github.com/zbt494
   获取Token方式：
   打开【❗️京喜农场❗️】，手动任意完成<工厂任务>、<签到任务>、<金牌厂长任务>一项，提示获取cookie成功即可，然后退出跑任务脚本
 
-  Quantumult X:
-  [task_local]
-  0 0 * * * jx_cfdtx.js, tag=财富岛提现, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxcfd.png, enabled=true
-  [rewrite_local]
-  ^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
-
-  Loon:
-  [Script]
-  http-request ^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js, requires-body=false, timeout=10, tag=京喜农场cookie
-  cron "0 0 * * *" script-path=jx_cfdtx.js,tag=财富岛提现
-    
-  Surge:
-  财富岛提现 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=20,script-path=jx_cfdtx.js
-  京喜农场cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
-    
-  Shadowrocket:
-  [Script]
-  财富岛提现 = type=cron,script-path=jx_cfdtx.js,cronexpr="0 0 * * *",timeout=120,enable=true
-  京喜农场Cookie = type=http-request,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,max-size=131072,timeout=10,enable=true
-
-  BoxJS订阅
-  https://raw.githubusercontent.com/whyour/hundun/master/quanx/whyour.boxjs.json
-
-  ################################## 定义京喜农场TOKEN（选填） ##################################
-  ## 如果某个Cookie的账号种植的是app种子，则必须填入有效的TOKEN；而种植非app种子则不需要TOKEN
-  ## TOKEN的形式：{"farm_jstoken":"749a90f871adsfads8ffda7bf3b1576760","timestamp":"1610165423873","phoneid":"42c7e3dadfadsfdsaac-18f0e4f4a0cf"}
-  ## 因TOKEN中带有双引号，因此，变量值两侧必须由一对单引号引起来
-  ## TOKEN如何获取请阅读以下文件的注释：https://github.com/lxk0301/jd_scripts/blob/master/jd_jxnc.js
-  TokenJxnc1='{"farm_jstoken":"xxx","phoneid":"xxx","timestamp":"xxx"}'
-  TokenJxnc2=''
-  TokenJxnc3=''
-  TokenJxnc4=''
-  TokenJxnc5=''
-  TokenJxnc6=''
 *
 **/
 
@@ -65,7 +32,7 @@ $.userName = '';
   if (!getTokens()) return;
   for (let i = 0; i < $.cookieArr.length; i++) {
     $.currentCookie = $.cookieArr[i];
-    $.currentToken = JSON.parse($.tokenArr[0] || '{}');
+    $.currentToken = $.tokenArr[i];
     if ($.currentCookie) {
       $.userName =  decodeURIComponent($.currentCookie.match(/pt_pin=(.+?);/) && $.currentCookie.match(/pt_pin=(.+?);/)[1]);
       $.log(`\n开始【京东账号${i + 1}】${$.userName}`);
@@ -83,7 +50,7 @@ function cashOut() {
     $.get(
       taskUrl(
         `consume/CashOut`,
-        `ddwMoney=100&dwIsCreateToken=0&ddwMinPaperMoney=50000&pgtimestamp=${$.currentToken['timestamp']}&phoneID=${$.currentToken['phoneid']}&pgUUNum=${$.currentToken['farm_jstoken']}`
+        `ddwMoney=100&dwIsCreateToken=0&ddwMinPaperMoney=50000&strPgtimestamp=${$.currentToken['timestamp']}&strPhoneID=${$.currentToken['phoneid']}&strPgUUNum=${$.currentToken['farm_jstoken']}`
       ), 
       async (err, resp, data) => {
         try {
@@ -102,7 +69,6 @@ function cashOut() {
   });
 } 
 
-
 function taskUrl(function_path, body) {
   return {
     url: `${JD_API_HOST}jxcfd/${function_path}?strZone=jxcfd&bizCode=jxcfd&source=jxcfd&dwEnv=7&_cfd_t=${Date.now()}&ptag=&${body}&_=${Date.now()}&sceneval=2&g_login_type=1&g_ty=ls`,
@@ -110,10 +76,10 @@ function taskUrl(function_path, body) {
       Cookie: $.currentCookie,
       Accept: "*/*",
       Connection: "keep-alive",
-      Referer:"https://st.jingxi.com/fortune_island/cash.html?jxsid=16104486168107224113&_f_i_jxapp=1",
+      Referer:"https://st.jingxi.com/fortune_island/cash.html?jxsid=16115391812299482601&_f_i_jxapp=1",
       "Accept-Encoding": "gzip, deflate, br",
       Host: "m.jingxi.com",
-      "User-Agent":"jdpingou;iPhone;3.17.2;14.3;eda0c08155e1f72a7defb5eb05058b423a01d1fe;network/wifi;model/iPhone12,1;appBuild/100392;ADID/B6E0D04F-7148-48D5-8437-2AB36FAD8CF5;supportApplePay/1;hasUPPay/0;pushNoticeIsOpen/1;hasOCPay/0;supportBestPay/0;session/235;pap/JA2019_3111789;brand/apple;supportJDSHWK/1;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+      "User-Agent":"jdpingou;iPhone;4.1.4;14.3;9f08e3faf2c0b4e72900552400dfad2e7b2273ba;network/wifi;model/iPhone11,6;appBuild/100415;ADID/00000000-0000-0000-0000-000000000000;supportApplePay/1;hasUPPay/0;pushNoticeIsOpen/0;hasOCPay/0;supportBestPay/0;session/428;pap/JA2019_3111789;brand/apple;supportJDSHWK/1;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
       "Accept-Language": "zh-cn",
     },
   };
@@ -146,7 +112,7 @@ function getTokens() {
       $.tokenArr.push(jdTokenNode[item] ? JSON.parse(jdTokenNode[item]) : '{}');
     })
   } else {
-    $.tokenArr = [$.getdata('jxnc_token1') || '{}', $.getdata('jxnc_token2') || '{}'];
+    $.tokenArr = [JSON.parse($.getdata('jxnc_token1') || '{}'), JSON.parse($.getdata('jxnc_token2') || '{}')];
   }
   if (!$.tokenArr[0]) {
     $.msg(
