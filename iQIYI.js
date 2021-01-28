@@ -3,8 +3,7 @@
 
 更新时间: 2020.9.6
 脚本兼容: QuantumultX, Surge4, Loon, JsBox, Node.js
-电报频道: @NobyDa
-问题反馈: @NobyDa_bot
+电报频道: @Chipun
 
 获取Cookie说明：
 打开爱奇艺App后(AppStore中国区)，点击"我的", 如通知成功获取cookie, 则可以使用此签到脚本.
@@ -25,11 +24,11 @@ QuantumultX 远程脚本配置:
 **********************
 [task_local]
 # 爱奇艺会员签到
-0 9 * * * https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+0 9 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/iQIYI.js
 
 [rewrite_local]
 # 获取Cookie
-^https?:\/\/iface(\d)?\.iqiyi\.com\/ url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+^https?:\/\/iface(\d)?\.iqiyi\.com\/ url script-request-header https://raw.githubusercontent.com/Chibinl/JD-JX/main/iQIYI.js
 
 [mitm] 
 hostname= ifac*.iqiyi.com
@@ -38,9 +37,9 @@ hostname= ifac*.iqiyi.com
 Surge 4.2.0+ 脚本配置:
 **********************
 [Script]
-爱奇艺签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+爱奇艺签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/iQIYI.js
 
-爱奇艺获取Cookie = type=http-request,pattern=^https?:\/\/iface(\d)?\.iqiyi\.com\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+爱奇艺获取Cookie = type=http-request,pattern=^https?:\/\/iface(\d)?\.iqiyi\.com\/,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/iQIYI.js
 
 [MITM] 
 hostname= ifac*.iqiyi.com
@@ -51,10 +50,10 @@ Loon 2.1.0+ 脚本配置:
 
 [Script]
 # 爱奇艺签到
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/iQIYI.js
 
 # 获取Cookie
-http-request ^https?:\/\/iface(\d)?\.iqiyi\.com\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+http-request ^https?:\/\/iface(\d)?\.iqiyi\.com\/ script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/iQIYI.js
 
 [Mitm] 
 hostname= ifac*.iqiyi.com
