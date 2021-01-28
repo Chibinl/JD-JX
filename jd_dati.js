@@ -3,7 +3,7 @@
 /*
 京东神仙书院答题
 
-修改自shylocks大神的脚本
+修改自Chipun大神的脚本
 
 活动时间:2021-1-27至2021-2-5
 活动入口: 京东app-我的-神仙书院
@@ -13,14 +13,14 @@
 ============Quantumultx===============
 [task_local]
 #京东神仙书院答题
-10 8 * * * https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_dati.js, tag=京东神仙书院答题, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
+10 8 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_dati.js, tag=京东神仙书院答题, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
 ================Loon==============
 [Script]
-cron "10 8 * * *" script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_dati.js,tag=京东神仙书院答题
+cron "10 8 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_dati.js,tag=京东神仙书院答题
 ===============Surge=================
-京东神仙书院答题 = type=cron,cronexp="20 8 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_dati.js
+京东神仙书院答题 = type=cron,cronexp="20 8 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_dati.js
 ============小火箭=========
-京东神仙书院答题 = type=cron,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_dati.js, cronexpr="20 8 * * *", timeout=3600, enable=true
+京东神仙书院答题 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_dati.js, cronexpr="20 8 * * *", timeout=3600, enable=true
  */
 const $ = new Env('京东神仙书院答题');
 
