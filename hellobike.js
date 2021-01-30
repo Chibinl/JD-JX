@@ -1,3 +1,17 @@
+#感谢 Chipun大佬
+#圈X  添加
+[MITM]
+gameapi.hellobike.com
+
+[rewrite_local]
+# 哈啰出行
+^https:\/\/gameapi\.hellobike\.com\/api url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js
+
+[task_local]
+# 哈啰出行
+5 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/hellobike.js
+
+
 const HELLO_BIKE = init()
 const TASK_NAME = '哈啰出行'
 const TOKEN_KEY = 'hellobike'
