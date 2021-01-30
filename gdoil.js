@@ -1,3 +1,18 @@
+#感谢 Chipun 大佬
+
+#圈x 添加编辑
+
+[MITM]
+m.gdoil.cn
+
+[rewrite_local]
+#加油广东
+^https:\/\/m.gdoil.cn\/webapi\/usersign\/addusersign url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.cookie.js
+
+[task_local]
+1 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/gdoil.js
+
+
 const cookieName = '加油广东'
 const signurlKey = 'chavy_signurl_gdoil'
 const signheaderKey = 'chavy_signheader_gdoil'
