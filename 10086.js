@@ -1,3 +1,18 @@
+#感谢 Chipun 大佬
+#圈x 添加编辑
+[MITM]
+wx.10086.cn
+
+[rewrite_local]
+# 中国移动10086 获取cookie
+^http:\/\/wx.10086.cn\/website\/taskCenter\/index\? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.cookie.js
+^http:\/\/wx.10086.cn\/website\/taskCenter\/sign\? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.cookie.js
+^https:\/\/clientaccess.10086.cn\/biz-orange\/LN\/uamrandcodelogin\/autoLogin url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js
+^https:\/\/clientaccess.10086.cn\/biz-orange\/BN\/realFeeQuery\/getRealFee url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.cookie.js
+
+[task_local]
+1 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/10086.js
+
 const cookieName = '中国移动'
 const tokenurlKey = 'chavy_tokenurl_10086'
 const tokenheaderKey = 'chavy_tokenheader_10086'
