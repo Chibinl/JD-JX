@@ -1,3 +1,18 @@
+#感谢 Chipun 大佬
+
+#圈x 添加
+
+[MITM]
+wandafilm.com
+
+[rewrite_local]
+#万达电影
+^https:\/\/user-api-prd-mx\.wandafilm\.com url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/wanda/wanda.cookie.js
+
+[task_local]
+#万达电影
+1 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/wanda.js
+
 const $ = new Env('万达电影')
 $._mi_ = 'senku_wanda_mi_'
 $.desc = []
