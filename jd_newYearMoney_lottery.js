@@ -1,5 +1,6 @@
 /*
 京东压岁钱抢百元卡
+感谢 Chipun 大佬
 活动时间：2021-2-1至2021-2-10
 活动入口：京东APP我的-压岁钱
 活动地址：https://unearth.m.jd.com/babelDiy/Zeus/22uHDsyHntidZV9tpwov2hrUUvmb/index.html
@@ -8,17 +9,17 @@
 ============Quantumultx===============
 [task_local]
 #京东压岁钱抢百元卡
-0 0 9,12,16,20 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_newYearMoney_lottery.js, tag=京东压岁钱抢百元卡, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
+0 0 9,12,16,20 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_newYearMoney_lottery.js, tag=京东压岁钱抢百元卡, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "0 0 9,12,16,20 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_newYearMoney_lottery.js, tag=京东压岁钱抢百元卡
+cron "0 0 9,12,16,20 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_newYearMoney_lottery.js, tag=京东压岁钱抢百元卡
 
 ===============Surge=================
-京东压岁钱抢百元卡 = type=cron,cronexp="0 0 9,12,16,20 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_newYearMoney_lottery.js
+京东压岁钱抢百元卡 = type=cron,cronexp="0 0 9,12,16,20 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_newYearMoney_lottery.js
 
 ============小火箭=========
-京东压岁钱抢百元卡 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_newYearMoney_lottery.js, cronexpr="0 0 9,12,16,20 * * *", timeout=3600, enable=true
+京东压岁钱抢百元卡 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_newYearMoney_lottery.js, cronexpr="0 0 9,12,16,20 * * *", timeout=3600, enable=true
  */
 
 const $ = new Env('京东压岁钱抢百元卡');
