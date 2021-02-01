@@ -1,8 +1,8 @@
 /*
 更新时间: 2020-09-04 11:45
 
-> 感谢 [@barry](https://t.me/barrymchen) 编写
-> 感谢 [@GideonSenku](https://github.com/GideonSenku) 对代码优化
+> 感谢 [@Chipun] 编写
+> 感谢 [@Chipun) 对代码优化
 本脚本仅适用于京东到家签到及获取鲜豆
 获取Cookie方法:
 1.将下方[rewrite_local]和[MITM]地址复制的相应的区域
@@ -17,25 +17,25 @@ by Macsuny
 ~~~~~~~~~~~~~~~~
 Surge 4.0 :
 [Script]
-京东到家 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js,script-update-interval=0
+京东到家 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jddj.js,script-update-interval=0
 
 # 获取京东到家 Cookie.
-京东到家 = type=http-request,pattern=https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js,
+京东到家 = type=http-request,pattern=https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jddj.js,
 ~~~~~~~~~~~~~~~~~~~~
 Loon 2.1.0+
 [Script]
-cron "04 00 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js, enabled=true, tag=京东到家
+cron "04 00 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jddj.js, enabled=true, tag=京东到家
 
-http-request https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js
+http-request https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jddj.js
 
 ---------------------
 
 QX 1.0.7+ :
 [task_local]
-0 9 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js
+0 9 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jddj.js
 
 [rewrite_local]
-https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js
+https:\/\/daojia\.jd\.com\/client\?_jdrandom=\d{13}&functionId=%2Fsignin url script-request-header https://raw.githubusercontent.com/Chibinl/JD-JX/main/jddj.js
 ~~~~~~~~~~~~~~~~
 
 hostname = daojia.jd.com
