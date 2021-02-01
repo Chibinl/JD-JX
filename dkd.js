@@ -1,6 +1,6 @@
 /*
 软件名称:多看点 商店搜索下载
-更新时间：2021-02-01 @肥皂
+更新时间：2021-02-01 @Chipun
 脚本说明：多看点自动任务
 目前包含签到，开宝箱，开双倍宝箱
 看广告，任务列表奖励领取，自动提现
@@ -10,27 +10,25 @@
 首次运行脚本，会提示获取Cookie，
 点击我的获取Cookie！
 
-TG电报群: https://t.me/hahaha8028
-
-我的邀请码：13152063   万分感谢填写！
+我的邀请码：13171978   万分感谢填写！
 
 
 多看点自动任务
 圈X配置如下，其他软件自行测试
 [task_local]
 #多看点
-10 * * * * https://raw.githubusercontent.com/age174/-/main/dkd.js, tag=多看点, img-url=https://raw.githubusercontent.com/shoujiqiyuan/PokemonGOforQuanX/master/IconSet/X003.png, enabled=true
+10 * * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/dkd.js, tag=多看点, img-url=https://raw.githubusercontent.com/shoujiqiyuan/PokemonGOforQuanX/master/IconSet/X003.png, enabled=true
 
 [rewrite_local]
 #获取多看点Cookie
-^http:\/\/dkd-api\.dysdk\.com\/user\/index url script-request-body https://raw.githubusercontent.com/age174/-/main/dkd.js
+^http:\/\/dkd-api\.dysdk\.com\/user\/index url script-request-body https://raw.githubusercontent.com/Chibinl/JD-JX/main/dkd.js
 
 #loon
-^http:\/\/dkd-api\.dysdk\.com\/user\/index script-path=https://raw.githubusercontent.com/age174/-/main/dkd.js, requires-body=true, timeout=10, tag=多看点
+^http:\/\/dkd-api\.dysdk\.com\/user\/index script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/dkd.js, requires-body=true, timeout=10, tag=多看点
 
 #surge
 
-多看点 = type=http-request,pattern=^http:\/\/dkd-api\.dysdk\.com\/user\/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/age174/-/main/dkd.js,script-update-interval=0
+多看点 = type=http-request,pattern=^http:\/\/dkd-api\.dysdk\.com\/user\/index,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/dkd.js,script-update-interval=0
 [MITM]
 hostname = dkd-api.dysdk.com
 */
