@@ -1,5 +1,6 @@
 /*
 京东压岁钱
+感谢 Chipun 大佬
 助力码会一直变，不影响助力
 活动时间：2021-2-1至2021-2-11
 活动入口：京东APP我的-压岁钱
@@ -9,17 +10,17 @@
 ============Quantumultx===============
 [task_local]
 #京东压岁钱
-20 8,12 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_newYearMoney.js, tag=京东压岁钱, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
+20 8,12 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_newYearMoney.js, tag=京东压岁钱, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "20 8,12 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_newYearMoney.js, tag=京东压岁钱
+cron "20 8,12 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_newYearMoney.js, tag=京东压岁钱
 
 ===============Surge=================
-京东压岁钱 = type=cron,cronexp="20 8,12 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_newYearMoney.js
+京东压岁钱 = type=cron,cronexp="20 8,12 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_newYearMoney.js
 
 ============小火箭=========
-京东压岁钱 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_newYearMoney.js, cronexpr="20 8,12 * * *", timeout=3600, enable=true
+京东压岁钱 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_newYearMoney.js, cronexpr="20 8,12 * * *", timeout=3600, enable=true
  */
 
 const $ = new Env('京东压岁钱');
