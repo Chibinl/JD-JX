@@ -1,6 +1,7 @@
 /*
 更新时间: 2020-10-13 21:25
 
+感谢@ chipun 大佬
 本脚本仅适用于微博每日签到，支持Actions多账号运行  
 获取Cookie方法:
 1.将下方[rewrite_local]和[MITM]地址复制的相应的区域下
@@ -13,34 +14,34 @@ by Macsuny
 ~~~~~~~~~~~~~~~~
 Surge 4.0 :
 [Script]
-weibo.js = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,script-update-interval=0
+weibo.js = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/weibo.js,script-update-interval=0
 
 # 获取微博 Cookie.
-weibo.js = type=http-request,pattern=https:\/\/api\.weibo\.cn\/\d\/page\/\w+\?gsid,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+weibo.js = type=http-request,pattern=https:\/\/api\.weibo\.cn\/\d\/page\/\w+\?gsid,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/weibo.js
 # 微博钱包签到Cookie
-weibo.js = type=http-request,pattern=https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+weibo.js = type=http-request,pattern=https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\?,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/weibo.js
 
 ~~~~~~~~~~~~~~~~
 Loon 2.1.0+
 [Script]
 # 本地脚本
-cron "04 00 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js, enabled=true, tag=新浪微博
+cron "04 00 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/weibo.js, enabled=true, tag=新浪微博
 
-http-request https:\/\/api\.weibo\.cn\/\d\/page\/\w+\?gsid script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+http-request https:\/\/api\.weibo\.cn\/\d\/page\/\w+\?gsid script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/weibo.js
 
-http-request https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\? script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+http-request https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\? script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/weibo.js
 
 -----------------
 
 QX 1.0.6+ :
 [task_local]
-0 9 * * * https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+0 9 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/weibo.js
 
 [rewrite_local]
-https:\/\/api\.weibo\.cn\/\d\/page\/\w+\?gsid url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+https:\/\/api\.weibo\.cn\/\d\/page\/\w+\?gsid url script-request-header https://raw.githubusercontent.com/Chibinl/JD-JX/main/weibo.js
 
 # 钱包签到Cookie
-https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\? url script-request-header https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js
+https:\/\/pay\.sc\.weibo\.com\/aj\/mobile\/home\/welfare\/signin\/do\? url script-request-header https://raw.githubusercontent.com/Chibinl/JD-JX/main/weibo.js
 
 ~~~~~~~~~~~~~~~~
 [MITM]
