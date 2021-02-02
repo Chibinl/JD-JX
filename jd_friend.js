@@ -1,5 +1,12 @@
 /*
 joy总动员
+
+感谢@ Chipun 编辑
+圈x 添加编辑
+[task_local]
+1 9 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_friend.js, tag=joy总动员
+
+
  */
 const $ = new Env('joy总动员');
 
