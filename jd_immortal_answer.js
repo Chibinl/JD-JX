@@ -1,6 +1,7 @@
 /*
 京东神仙书院答题
 根据bing搜索结果答题，常识题可对，商品题不能保证胜率
+感谢@ Chipun 大佬
 活动时间:2021-1-27至2021-2-5
 活动入口: 京东APP我的-神仙书院
 活动地址：https://h5.m.jd.com//babelDiy//Zeus//4XjemYYyPScjmGyjej78M6nsjZvj//index.html?babelChannel=ttt9
@@ -9,17 +10,17 @@
 ============Quantumultx===============
 [task_local]
 #京东神仙书院答题
-20 * * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_immortal_answer.js, tag=京东神仙书院答题, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
+20 * * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_immortal_answer.js, tag=京东神仙书院答题, img-url=https://raw.githubusercontent.com/Orz-3/task/master/jd.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "20 * * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_immortal_answer.js,tag=京东神仙书院答题
+cron "20 * * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_immortal_answer.js,tag=京东神仙书院答题
 
 ===============Surge=================
-京东神仙书院答题 = type=cron,cronexp="20 * * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_immortal_answer.js
+京东神仙书院答题 = type=cron,cronexp="20 * * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_immortal_answer.js
 
 ============小火箭=========
-京东神仙书院答题 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_immortal_answer.js, cronexpr="20 * * * *", timeout=3600, enable=true
+京东神仙书院答题 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_immortal_answer.js, cronexpr="20 * * * *", timeout=3600, enable=true
  */
 const $ = new Env('京东神仙书院答题');
 
