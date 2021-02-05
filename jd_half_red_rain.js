@@ -1,21 +1,21 @@
 /*
 直播雨
 
-参考shylocks大佬的脚本改的
+参考Chipun大佬的脚本改的
 
-脚本更新地址：https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_half_red_rain.js
+脚本更新地址：https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_half_red_rain.js
 脚本兼容: Quantumult X, Surge, Loon, JSBox, Node.js
 ==========Quantumult X==========
 [task_local]
 #京东直播雨
-30,31 19-21 3-5 2 * https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_half_red_rain.js, tag=京东直播雨, enabled=true
+30,31 19-21 3-5 2 * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_half_red_rain.js, tag=京东直播雨, enabled=true
 =======Loon========
 [Script]
-cron "30,31 19-21 3-5 2 *" script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_half_red_rain.js,tag=京东直播雨
+cron "30,31 19-21 3-5 2 *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_half_red_rain.js,tag=京东直播雨
 ========Surge==========
-京东直播雨 = type=cron,cronexp="30,31 19-21 3-5 2 *",wake-system=1,timeout=620,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_half_red_rain.js
+京东直播雨 = type=cron,cronexp="30,31 19-21 3-5 2 *",wake-system=1,timeout=620,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_half_red_rain.js
 =======小火箭=====
-京东直播雨 = type=cron,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_half_red_rain.js, cronexpr="30,31 19-21 3-5 2 *", timeout=200, enable=true
+京东直播雨 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_half_red_rain.js, cronexpr="30,31 19-21 3-5 2 *", timeout=200, enable=true
  */
 const $ = new Env('红包雨');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
