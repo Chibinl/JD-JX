@@ -4,20 +4,20 @@
 活动地址：https://lzdz-isv.isvjcloud.com/dingzhi/change/able/activity/3508994?activityId=dz2102100001340201
 
 新手写脚本，难免有bug，能用且用。
-多谢 whyour 大佬 指导
+多谢 Chipun 大佬 指导
 
-更新地址：https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_entertainment.js
+更新地址：https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_entertainment.js
 ============Quantumultx===============
 [task_local]
 #百变大咖秀
-10 10,11 * * 2-5 https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_entertainment.js, tag=百变大咖秀,  enabled=true
+10 10,11 * * 2-5 https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_entertainment.js, tag=百变大咖秀,  enabled=true
 ================Loon==============
 [Script]
-cron "10 10,11 * * 2-5" script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_entertainment.js,tag=百变大咖秀
+cron "10 10,11 * * 2-5" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_entertainment.js,tag=百变大咖秀
 ===============Surge=================
-百变大咖秀 = type=cron,cronexp="10 10,11 * * 2-5",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_entertainment.js
+百变大咖秀 = type=cron,cronexp="10 10,11 * * 2-5",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_entertainment.js
 ============小火箭=========
-百变大咖秀 = type=cron,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_entertainment.js, cronexpr="10 10,11 * * 2-5", timeout=3600, enable=true
+百变大咖秀 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_entertainment.js, cronexpr="10 10,11 * * 2-5", timeout=3600, enable=true
 */
 
 const $ = new Env('百变大咖秀');
