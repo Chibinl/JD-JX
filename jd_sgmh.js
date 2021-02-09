@@ -1,5 +1,9 @@
 /*
 闪购盲盒
+感谢： Chipun 大佬
+
+# 闪购盲盒
+1 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_sgmh.js, tag=闪购盲盒, img-url=https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/jd_wechat_sign.png, enabled=true
 
  */
 const $ = new Env('闪购盲盒');
@@ -8,8 +12,8 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let appId = '1EFRRxA' , homeDataFunPrefix = 'interact_template', collectScoreFunPrefix = 'harmony', message = ''
 let lotteryResultFunPrefix = homeDataFunPrefix, browseTime = 6
 const inviteCodes = [
-  'T0225KkcRh4bowCFIR2gwqMMfQCjVWmIaW5kRrbA@T019-aknAFRllhyoQlyI46gCjVWmIaW5kRrbA',
-  'T0225KkcRh4bowCFIR2gwqMMfQCjVWmIaW5kRrbA@T019-aknAFRllhyoQlyI46gCjVWmIaW5kRrbA'
+  'T018v_V1Rhgd9VDRIxib1ACjVWmIaW5kRrbA@T016zaUqAFtH6CiCZUSjCjVWmIaW5kRrbA',
+  'T018v_V1Rhgd9VDRIxib1ACjVWmIaW5kRrbA@T016zaUqAFtH6CiCZUSjCjVWmIaW5kRrbA'
 ];
 const randomCount = $.isNode() ? 20 : 5;
 const notify = $.isNode() ? require('./sendNotify') : '';
