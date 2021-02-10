@@ -1,6 +1,7 @@
 /*
 环球挑战赛
 活动时间：2021-02-02 至 2021-02-22
+感谢@ chipun
 1个号可以助力5人，需要5人助力，如每天跑满能换1000+京豆
 多个账号会相互互助
 活动地址：https://gmart.jd.com/?appId=54935130
@@ -10,17 +11,17 @@
 ============Quantumultx===============
 [task_local]
 #环球挑战赛
-0 9,12,20,21 * * * https://gitee.com/lxk0301/jd_scripts/raw/master/jd_global.js, tag=环球挑战赛, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/lxk0301/jd_global.png, enabled=true
+0 9,12,20,21 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_global.js, tag=环球挑战赛, img-url=https://raw.githubusercontent.com/yogayyy/Scripts/main/Icon/lxk0301/jd_global.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "0 9,12,20,21 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_global.js,tag=环球挑战赛
+cron "0 9,12,20,21 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_global.js,tag=环球挑战赛
 
 ===============Surge=================
-环球挑战赛 = type=cron,cronexp="0 9,12,20,21 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_global.js
+环球挑战赛 = type=cron,cronexp="0 9,12,20,21 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_global.js
 
 ============小火箭=========
-环球挑战赛 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_global.js, cronexpr="0 9,12,20,21 * * *", timeout=3600, enable=true
+环球挑战赛 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_global.js, cronexpr="0 9,12,20,21 * * *", timeout=3600, enable=true
  */
 const $ = new Env('环球挑战赛');
 
@@ -50,8 +51,8 @@ if ($.isNode()) {
 
 const JD_API_HOST = 'https://api.m.jd.com/', actCode = 'visa-card-001';
 const inviteCodes = [
-  'WmpHM2pndWh3OFphS2NsbTRLMmhqZz09@M3ozUGw0eExUZ25hSHBTZ2pJcTdpZz09@S2tETnZ0REtONy9Dc2Nqek1KNXpmWHFTNnF3OUtQQjJKZmJ2YUtSS3BQTT0=@a1RrenU1WExQaXRWS3VIZHgwMjlUYzJSeHhVMDlvZXgxR2RsdkZkRXZnOD0=@bHNsOVFIL2tQRTJhSndpRVNHVTlheXJLbzZRK09HaUtidjJUUFNQRXdqbz0=@M0JxTFVEbmxtV05uQWJVQVdyL2NxeTcycG1lcWtEbzVOc283bjR2MklkWT0=',
-  'a1RrenU1WExQaXRWS3VIZHgwMjlUYzJSeHhVMDlvZXgxR2RsdkZkRXZnOD0=@bHNsOVFIL2tQRTJhSndpRVNHVTlheXJLbzZRK09HaUtidjJUUFNQRXdqbz0=@WmpHM2pndWh3OFphS2NsbTRLMmhqZz09@M3ozUGw0eExUZ25hSHBTZ2pJcTdpZz09@S2tETnZ0REtONy9Dc2Nqek1KNXpmWHFTNnF3OUtQQjJKZmJ2YUtSS3BQTT0=',
+  'OE90L0dnQW1uYWhzTnlrTDZ2RS9Udz09@ekdnTnpURkltT2JmdUUrWFp1aG5tZz09@S2tETnZ0REtONy9Dc2Nqek1KNXpmWHFTNnF3OUtQQjJKZmJ2YUtSS3BQTT0=@a1RrenU1WExQaXRWS3VIZHgwMjlUYzJSeHhVMDlvZXgxR2RsdkZkRXZnOD0=@bHNsOVFIL2tQRTJhSndpRVNHVTlheXJLbzZRK09HaUtidjJUUFNQRXdqbz0=@M0JxTFVEbmxtV05uQWJVQVdyL2NxeTcycG1lcWtEbzVOc283bjR2MklkWT0=',
+  'a1RrenU1WExQaXRWS3VIZHgwMjlUYzJSeHhVMDlvZXgxR2RsdkZkRXZnOD0=@bHNsOVFIL2tQRTJhSndpRVNHVTlheXJLbzZRK09HaUtidjJUUFNQRXdqbz0=@OE90L0dnQW1uYWhzTnlrTDZ2RS9Udz09@ekdnTnpURkltT2JmdUUrWFp1aG5tZz09@S2tETnZ0REtONy9Dc2Nqek1KNXpmWHFTNnF3OUtQQjJKZmJ2YUtSS3BQTT0=',
 ];
 $.invites = [];
 !(async () => {
