@@ -1,9 +1,9 @@
 /**
  京东小魔方 活动入口：京东app-新品首发-百万京豆
  活动好像是持续进行的，cron还是修改成每天运行就好了。
-脚本更新地址：https://raw.githubusercontent.com/i-chenzhe/qx/master/jd_xmf.js
+脚本更新地址：https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xmf.js
 
-脚本内置了一个给作者任务助力的网络请求，默认开启，如介意请自行关闭。
+脚本内置了一个给Chipun的网络请求，默认关闭。
 助力活动链接： https://h5.m.jd.com/babelDiy/Zeus/4ZK4ZpvoSreRB92RRo8bpJAQNoTq/index.html
 参数 helpAuthor = false
 
@@ -12,12 +12,12 @@
  // quantumultx
  [task_local]
  # 京东小魔方
- 10 0 * * *   https://raw.githubusercontent.com/i-chenzhe/qx/master/jd_xmf.js, tag= 京东小魔方, enabled=true
+ 10 0 * * *   https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xmf.js, tag= 京东小魔方, enabled=true
  //Loon
  [Script]
- cron "  10 0 * * *   " script-path=https://raw.githubusercontent.com/i-chenzhe/qx/master/jd_xmf.js ,tag= 京东小魔方
+ cron "  10 0 * * *   " script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xmf.js ,tag= 京东小魔方
  //Surge
-  京东小魔方 = type=cron,cronexp="  10 0 * * *   ",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/master/jd_xmf.js
+  京东小魔方 = type=cron,cronexp="  10 0 * * *   ",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xmf.js
 * */
 const $ = new Env('京东小魔方');
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -25,7 +25,7 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '';
-let helpAuthor = true;//为作者助力的开关
+let helpAuthor = false;//为作者助力的开关
 if ($.isNode()) {
     Object.keys(jdCookieNode).forEach((item) => {
         cookiesArr.push(jdCookieNode[item])
