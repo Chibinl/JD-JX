@@ -9,26 +9,26 @@
 助力活动链接： https://h5.m.jd.com/babelDiy/Zeus/4ZK4ZpvoSreRB92RRo8bpJAQNoTq/index.html
 参数 helpAuthor = false
 
-更新地址：https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_walmart.js
+更新地址：https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_walmart.js
 ============Quantumultx===============
 [task_local]
 #沃尔玛粉丝互动
-3 10 17-28 2 * https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_walmart.js, tag=沃尔玛粉丝互动,  enabled=true
+3 10 17-28 2 * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_walmart.js, tag=沃尔玛粉丝互动,  enabled=true
 ================Loon==============
 [Script]
-cron "3 10 17-28 2 *" script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_walmart.js,tag=沃尔玛粉丝互动
+cron "3 10 17-28 2 *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_walmart.js,tag=沃尔玛粉丝互动
 ===============Surge=================
-沃尔玛粉丝互动 = type=cron,cronexp="3 10 17-28 2 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_walmart.js
+沃尔玛粉丝互动 = type=cron,cronexp="3 10 17-28 2 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_walmart.js
 ============小火箭=========
-沃尔玛粉丝互动 = type=cron,script-path=https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_walmart.js, cronexpr="3 10 17-28 2 *", timeout=3600, enable=true
+沃尔玛粉丝互动 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_walmart.js, cronexpr="3 10 17-28 2 *", timeout=3600, enable=true
 */
 
 const $ = new Env('沃尔玛粉丝互动');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 let cookiesArr = [], cookie = '', originCookie = '', message = '';
-let helpAuthor = true;//为作者助力的开关
-const ACT_ID = '8194c0e37a5543da94be8fe5c4caee74';
+let helpAuthor = false;//为作者助力的开关
+const ACT_ID = '';
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
