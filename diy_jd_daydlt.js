@@ -4,17 +4,17 @@
 ============Quantumultx===============
 [task_local]
 #天天优惠大乐透
-0 0 * * * https://raw.githubusercontent.com/mit-ywtm/MyScripts/main/daydlt/jd_daydlt.js, tag=天天优惠大乐透, enabled=true
+0 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/diy_jd_daydlt.js, tag=天天优惠大乐透, enabled=true
 
 ================Loon==============
 [Script]
-cron "0 0 * * *" script-path=https://raw.githubusercontent.com/mit-ywtm/MyScripts/main/daydlt/jd_daydlt.js,tag=天天优惠大乐透
+cron "0 0 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/diy_jd_daydlt.js,tag=天天优惠大乐透
 
 ===============Surge=================
-天天优惠大乐透 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/mit-ywtm/MyScripts/main/daydlt/jd_daydlt.js
+天天优惠大乐透 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/diy_jd_daydlt.js
 
 ============小火箭=========
-天天优惠大乐透 = type=cron,script-path=https://raw.githubusercontent.com/mit-ywtm/MyScripts/main/daydlt/jd_daydlt.js, cronexpr="0 0 * * *", timeout=3600, enable=true
+天天优惠大乐透 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/diy_jd_daydlt.js, cronexpr="0 0 * * *", timeout=3600, enable=true
  */
 
 const $ = new Env('天天优惠大乐透');
