@@ -9,17 +9,17 @@
 ============Quantumultx===============
 [task_local]
 #京喜工厂
-10 * * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_dreamFactory.js, tag=京喜工厂, img-url=https://github.com/58xinian/icon/raw/master/jdgc.png, enabled=true
+10 * * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_dreamFactory.js, tag=京喜工厂, img-url=https://github.com/58xinian/icon/raw/master/jdgc.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "10 * * * *" script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_dreamFactory.js,tag=京喜工厂
+cron "10 * * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_dreamFactory.js,tag=京喜工厂
 
 ===============Surge=================
-京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_dreamFactory.js
+京喜工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_dreamFactory.js
 
 ============小火箭=========
-京喜工厂 = type=cron,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_dreamFactory.js, cronexpr="10 * * * *", timeout=3600, enable=true
+京喜工厂 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_dreamFactory.js, cronexpr="10 * * * *", timeout=3600, enable=true
 
  */
 // prettier-ignore
@@ -33,18 +33,18 @@ cron "10 * * * *" script-path=https://jdsharedresourcescdn.azureedge.net/jdresou
 
 const $ = new Env('京喜工厂');
 const JD_API_HOST = 'https://m.jingxi.com';
-const helpAu = true; //帮作者助力 免费拿活动
+const helpAu = false; //帮作者助力 免费拿活动
 const notify = $.isNode() ? require('./sendNotify') : '';
 let jdNotify = true;//是否关闭通知，false打开通知推送，true关闭通知推送
 const randomCount = $.isNode() ? 20 : 5;
 let tuanActiveId = `6S9y4sJUfA2vPQP6TLdVIQ==`;
 const jxOpenUrl = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%22des%22:%20%22m%22,%20%22url%22:%20%22https://wqsd.jd.com/pingou/dream_factory/index.html%22%20%7D`;
-let cookiesArr = [], cookie = 'wxa_level=1; retina=1; cid=9; jxsid=16142222591203591479; webp=1; __jda=122270672.16142222595351300266275.1614222259.1614222259.1614222259.1; __jdv=122270672%7Cdirect%7C-%7Cnone%7C-%7C1614222259537; __jdc=122270672; mba_muid=16142222595351300266275; visitkey=63946445682235781; autoOpenApp_downCloseDate_auto=1614222260256_10800000; shshshfpa=05a8e7f6-7325-133e-f823-1399ab492a86-1614222268; shshshfpb=oaawXhc%2FEG4YDUBAtfddH1w%3D%3D; 3AB9D23F7A4B3C9B=WMNWYNKOKP7YPA32YBQ7NZVAUD5737NGMBHQHE6HBY4V57OON4X7IU6KBT5KXBP7ONY5DTDSOUKVAVC4UW3GDTIJDA; jcap_dvzw_fp=ADfR7BlTot46hbmp2rJ_koSKELDQycJVnbox7g4sEhETI1VQ7GULiDiYie4IQaTSgoUkow==; TrackerID=OW6mkkRSWij2lCgZdB5PGC9ABxLuHNIECnOtxulM_lUFsSdTu2MvXFcdVn5Edq-8MuPFNfsFr-mLeOdOeUF0i_DhS-7Wlm-t8HUFhGiXSG9Zxm3fFPqzLeb5clYX5kK3qoiMti64m30_NaqFvA-_sA; pt_key=AAJgNxPOADD6R90M2wAXRuqw82e6RVW1tqhiL1mrjE7mKVOYuyxbSdC8rz7w1DwlLAtiAlF9JJ0; pt_pin=Chipun-Leung; pt_token=atk9fqmd; pwdt_id=Chipun-Leung; sfstoken=tk01m97b41b6da8sMXgxKzF4M3gxJNOSs7COGhyPESbd1w/L/R4hqM3zqsp366KETW7X6Bxb8Jwy6KaC9BXf9nPZn4fb; whwswswws=; __wga=1614222290972.1614222290972.1614222290972.1614222290972.1.1; PPRD_P=UUID.16142222595351300266275; jxsid_s_t=1614222291086; jxsid_s_u=https%3A//home.m.jd.com/myJd/newhome.action; sc_width=375; shshshfp=58cb62a879398a6fe8209e4915a3c81b; shshshsID=fc7db01b786bb6de335558febff5df23_2_1614222291460; wqmnx1=MDEyNjM1MnQvLj9lMmkxMjA0NjQyOGk1aWVVb1MwZSApbEswM0ggIG9yLyBsQVNpLjJzNFUtNTFPQ0gqKCk%3D; __jdb=122270672.5.16142222595351300266275|1.1614222259; mba_sid=1614222259541769532644470409.5; __jd_ref_cls=MCommonBottom_My', message = '';
+let cookiesArr = [], cookie = '', message = '';
 const inviteCodes = [
   'V5LkjP4WRyjeCKR9VRwcRX0bBuTz7MEK0-E99EJ7u0k=@0WtCMPNq7jekehT6d3AbFw==',
-  "gB99tYLjvPcEFloDgamoBw==@7dluIKQMp0bySgcr8AqFgw==",
-  '-OvElMzqeyeGBWazWYjI1Q==',
-  'GFwo6PntxDHH95ZRzZ5uAg=='
+  "viDREwLG2v8DqEfWp9B4aA==@7dluIKQMp0bySgcr8AqFgw==",
+  'cBonca1U1l0Bmks1zXPq2Q==',
+  'w4CA1ZHe9NNxQHJ3hX6thg=='
 ];
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 $.tuanIds = [];
