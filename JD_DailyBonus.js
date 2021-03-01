@@ -5,8 +5,8 @@
 更新时间: 2021.02.28 18:30 v1.96
 有效接口: 35+
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
-电报频道: @NobyDa 
-问题反馈: @NobyDa_bot 
+电报频道: @chipun
+问题反馈: @chipun
 如果转载: 请注明出处
 
 *************************
@@ -51,9 +51,9 @@ BoxJs或QX Gallery订阅地址: https://raw.githubusercontent.com/NobyDa/Script/
 *************************
 
 [Script]
-京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/JD_DailyBonus.js
 
-获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/JD_DailyBonus.js
 
 [MITM]
 hostname = api.m.jd.com
@@ -63,9 +63,9 @@ hostname = api.m.jd.com
 *************************
 
 [Script]
-cron "5 0 * * *" tag=京东多合一签到, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+cron "5 0 * * *" tag=京东多合一签到, script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/JD_DailyBonus.js
 
-http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean tag=获取京东Cookie, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean tag=获取京东Cookie, script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/JD_DailyBonus.js
 
 [MITM]
 hostname = api.m.jd.com
@@ -77,12 +77,12 @@ hostname = api.m.jd.com
 [task_local]
 # 京东多合一签到
 # 注意此为远程路径, 低版本用户请自行调整为本地路径.
-5 0 * * * https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js, tag=京东多合一签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/jd.png,enabled=true
+5 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/JD_DailyBonus.js, tag=京东多合一签到, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/jd.png,enabled=true
 
 [rewrite_local]
 # 获取京东Cookie. 
 # 注意此为远程路径, 低版本用户请自行调整为本地路径.
-https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/Chibinl/JD-JX/main/JD_DailyBonus.js
 
 [mitm]
 hostname = api.m.jd.com
