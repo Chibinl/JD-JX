@@ -4,9 +4,9 @@
 │┕━┦┎┒│┕┚││││┕┚│┎┒│┕┚│┎┒│
 ┕━━┹┚┕┹━━┹┚┕┹━━┹┚┕┹━━┹┚┕┚
 ============================================
-成功的话请打开App-我的，帮我填下邀请码347770助力
+成功的话请支持下我：chipun
 ============================================
-说明详情请见：https://raw.githubusercontent.com/CenBoMin/GithubSync/main/CONGHUA/readme.js
+说明详情请见：https://raw.githubusercontent.com/Chibinl/JD-JX/main/chonghua.js
 
 */
 
@@ -209,9 +209,7 @@ if ($.isNode()) {
   } else {
     $.msg(
       jsname,
-      "💖请到BoxJs填写自己的邀请码,保存设置\n",
-      "点击跳转,复制链接,订阅我的BoxJs", {
-        "open-url": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/cenbomin.box.json"
+
       }
     );
   }
