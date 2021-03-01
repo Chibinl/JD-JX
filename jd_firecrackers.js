@@ -8,17 +8,17 @@
 ============Quantumultx===============
 [task_local]
 #她的节享京豆
-0 8,21 1-8/1 3 * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_firecrackers.js, tag=她的节享京豆, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+0 8,21 1-8/1 3 * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_firecrackers.js, tag=她的节享京豆, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "0 8,21 1-8/1 3 *" script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_firecrackers.js,tag=她的节享京豆
+cron "0 8,21 1-8/1 3 *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_firecrackers.js,tag=她的节享京豆
 
 ===============Surge=================
-她的节享京豆 = type=cron,cronexp="0 8,21 1-8/1 3 *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_firecrackers.js
+她的节享京豆 = type=cron,cronexp="0 8,21 1-8/1 3 *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_firecrackers.js
 
 ============小火箭=========
-她的节享京豆 = type=cron,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_firecrackers.js, cronexpr="0 8,21 1-8/1 3 *", timeout=3600, enable=true
+她的节享京豆 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_firecrackers.js, cronexpr="0 8,21 1-8/1 3 *", timeout=3600, enable=true
  */
 const $ = new Env('她的节享京豆');
 const notify = $.isNode() ? require('./sendNotify') : '';
