@@ -1,30 +1,27 @@
 /*
-tgchannel：https://t.me/ZhiYi_Script
-github：https://github.com/ZhiYi-N/script
-boxjs：https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/ZhiYi-N.boxjs.json
+github：https://raw.githubusercontent.com/Chibinl/JD-JX/main/huoshan.js
 转载留个名字，谢谢
-邀请码：AU6GW
 谢谢
-作者：执意ZhiYi-N
+作者：chipun
 #看一个视频弹出金币获取ck
 
 [mitm]
 hostname = *.huoshan.com
 #圈x
 [rewrite local]
-/hotsoon/flame/task_done/? url script-request-body https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js
+/hotsoon/flame/task_done/? url script-request-body https://raw.githubusercontent.com/Chibinl/JD-JX/main/huoshan.js
 
-/hotsoon/item/reaction/_play/? url script-request-body https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js
+/hotsoon/item/reaction/_play/? url script-request-body https://raw.githubusercontent.com/Chibinl/JD-JX/main/huoshan.js
 
 #loon
-http-request /hotsoon/flame/task_done/? script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js, requires-body=true, timeout=10, tag=抖音火山版video
+http-request /hotsoon/flame/task_done/? script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/huoshan.js, requires-body=true, timeout=10, tag=抖音火山版video
 
-http-request /hotsoon/item/reaction/_play/? script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js, requires-body=true, timeout=10, tag=抖音火山版play
+http-request /hotsoon/item/reaction/_play/? script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/huoshan.js, requires-body=true, timeout=10, tag=抖音火山版play
 
 #surge
-抖音火山版video = type=http-request,pattern=/hotsoon/flame/task_done/?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js,script-update-interval=0
+抖音火山版video = type=http-request,pattern=/hotsoon/flame/task_done/?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/huoshan.js,script-update-interval=0
 
-抖音火山版play = type=http-request,pattern=/hotsoon/item/reaction/_play/?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/huoshan.js,script-update-interval=0
+抖音火山版play = type=http-request,pattern=/hotsoon/item/reaction/_play/?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/huoshan.js,script-update-interval=0
 */
 
 const zhiyi = '抖音火山版'
@@ -39,8 +36,8 @@ let playbody = $.getdata('playbody')
 let hsurl = $.getdata('hsurl')
 let hsheader = $.getdata('hsheader')
 let hsbody = $.getdata('hsbody')
-let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
-const invite=1;//新用户自动邀请，0关闭，1默认开启
+let tz = ($.getval('tz') || '0');//0关闭通知，1默认开启
+const invite=0;//新用户自动邀请，0关闭，1默认开启
 const logs =0;//0为关闭日志，1为开启
 var hour=''
 var minute=''
