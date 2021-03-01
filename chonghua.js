@@ -209,7 +209,8 @@ if ($.isNode()) {
   } else {
     $.msg(
       jsname,
-
+      "感谢博隽网络部提供脚本支持\n",{
+        "open-url": "https://raw.githubusercontent.com/Chibinl/JD-JX/main/chonghua.js"
       }
     );
   }
