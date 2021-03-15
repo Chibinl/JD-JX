@@ -1,11 +1,11 @@
 /*
- * @Author: LXK9301
+ * @Author: Chipun
  * @Date: 2020-10-21 17:04:04
- * @Last Modified by: LXK9301
+ * @Last Modified by: Chipun
  * @Last Modified time: 2020-11-05 00:35:04
  */
 /*
-手机尚学季脚本 https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js
+手机尚学季脚本 https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xtg.js
 手机尚学季活动地址：https://pro.m.jd.com/mall/active/23yuC2muhsBnv2515p8xLxC3D8Lv/index.html
 活动时间：2021年3月15日 00:00:00-2021年3月19日 23:59:59
 京豆先到先得！！！！！！！！！！！
@@ -15,17 +15,17 @@
 ============Quantumultx===============
 [task_local]
 #手机尚学季
-0 0 0 * * * https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js, tag=手机尚学季, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+0 0 0 * * * https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xtg.js, tag=手机尚学季, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "0 0 0 * * *" script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js,tag=手机尚学季
+cron "0 0 0 * * *" script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xtg.js,tag=手机尚学季
 
 ===============Surge=================
-手机尚学季 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js
+手机尚学季 = type=cron,cronexp="0 0 0 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xtg.js
 
 ============小火箭=========
-手机尚学季 = type=cron,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xtg.js, cronexpr="0 0 0 * * *", timeout=3600, enable=true
+手机尚学季 = type=cron,script-path=https://raw.githubusercontent.com/Chibinl/JD-JX/main/jd_xtg.js, cronexpr="0 0 0 * * *", timeout=3600, enable=true
  */
 const $ = new Env("手机尚学季");
 const activeEndTime = "2021/03/19 23:59:59+08:00"; //活动结束时间
